@@ -3,10 +3,10 @@ import cv2
 from glob import glob
 from PIL import Image 
 
-def masks():
+def masks(type, tt):
 
-    images = glob('Figaro1k/Original/Training/straight/*')
-    masks = glob('Figaro1k/GT/Training/straight/*')
+    images = np.sort(glob('Figaro1k/Original/'+tt+'/'+type+'/*'))
+    masks = np.sort(glob('Figaro1k/GT/'+tt+'/'+type+'/*'))
 
     for i, img in enumerate(images):
 
@@ -17,7 +17,7 @@ def masks():
 
         new_img = im * mk
 
-        cv2.imwrite('Figaro1k/Combo/Training/straight/'+fn, new_img)
+        cv2.imwrite('Figaro1k/Combo/'+tt+'/'+type+'/'+fn, new_img)
 
 
     return
