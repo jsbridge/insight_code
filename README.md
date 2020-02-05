@@ -1,3 +1,3 @@
-# Make Me Curly
+# Insight Fellowship
 
-This tool allows you to upload an image of your hair and recommends cury girl friendly products to maximize your curls.
+Random bits of code while coding my Make Me Curly app.
